@@ -25,6 +25,7 @@ require('./configs/session.config')(app);
 // Express View engine setup
 
 app.set('views', path.join(__dirname, 'views'));
+hbs.registerPartials(path.join(__dirname, '/views/partials/'));
 app.set('view engine', 'hbs');
 
 app.use(express.static(path.join(__dirname, 'public')));
